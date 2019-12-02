@@ -1,0 +1,153 @@
+@import url(https://fonts.googleapis.com/css?family=VT323);
+
+body{
+    background-color: #131313;
+    font-family: 'VT323', Courrier;
+}
+
+header {
+    margin-top: 100px;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+p {
+    font-size: 150%;
+    text-align: justify;
+}
+
+.Title {
+    font-family: Akashi;
+    color: white;
+    text-align: center;
+    font-size: 70px;
+    margin-top: 30px;
+}
+
+.container {
+    position: relative;
+}
+
+.column {
+    flex: 50%;
+    padding: 2px;
+}
+
+.row {
+    display: flex;
+  }
+
+.text-block-accueil {
+    position: absolute;
+    top: 15%;
+    left: 30%;
+    color: #00ff22;
+    height: 62%;
+    width: 31%;
+    overflow-y: scroll;
+    animation: flicker 1.5s infinite, fadein 2s;
+}
+
+.text-block-choicezoom {
+    position: absolute;
+    top: 15%;
+    left: 29%;
+    color: #00ff22;
+    height: 62%;
+    width: 28%;
+    overflow-y: scroll;
+    animation: zoomin 3s forwards, flicker 1.5s infinite, fadein 10s;
+}
+.text-block-choice {
+    position: absolute;
+    top: 15%;
+    left: 29%;
+    color: #00ff22;
+    height: 62%;
+    width: 28%;
+    overflow-y: scroll;
+    transform: scale(1.5);
+    animation: flicker 1.5s infinite, fadein 2s;
+}
+
+.imageintvzoom {
+    width: 100%;
+    animation: fadeinImages 10s;
+}
+
+::-webkit-scrollbar { /*Pour ne pas faire apparaitre la scrollbar dans chrome*/
+    display: none;
+}
+
+.HistoryTag {
+    font-size: 40px;
+}
+
+.CenterButton {
+    text-align: center;
+}
+
+.imageScaleUp {
+    margin-top: 180px;
+    transform: scale(1.5);
+}
+
+.imagezoomanimate {
+    margin-top: 180px;
+    -webkit-animation: zoomin 3s forwards;
+    animation: zoomin 3s forwards;
+}
+
+button {
+    text-align: center;
+    color: #00ff22;
+    background-color: #031a01;
+    border: none;
+    font-size: 40px;
+    font-family: 'VT323', Courrier;
+    animation: fadein 10s;
+    margin-bottom: 10px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00ff22;
+    color: #031a01;
+}
+
+
+@keyframes fadein {
+    from { color: #031a01; }
+    to { color: #00ff22; }
+}
+
+@keyframes fadeinImages {
+    from { opacity: 0 }
+    to { opacity: 100 };
+}
+
+@keyframes zoomin {
+    0% {transform: scale(1);}
+    100% {transform: scale(1.5);}
+}
+
+@keyframes flicker {
+    10% { opacity: 0.94554 }
+    20% { opacity: 0.62031 }
+    30% { opacity: 0.68695 }
+    35% { opacity: 0.5344 }
+    45% { opacity: 0.52042 }
+    60% { opacity: 0.9383 }
+    65% { opacity: 0.86615 }
+    70% { opacity: 0.68695 }
+    75% { opacity: 0.55749 }
+    80% { opacity: 0.96984 }
+    100% { opacity: 0.54813 }
+    
+}
